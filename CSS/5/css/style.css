@@ -1,0 +1,50 @@
+
+
+
+
+/* il margin e padding vengono messi automaticamente in proporizione all'h1, 
+scrivendoli qui esplicitamente li possiamo settare noi */
+
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ 
+
+
+
+
+.container{
+    border: 10px double red;
+    /*questi sovrascrivono border sopra, se scrivi una parte della pg in maniera + generale in genere la applica ad ogni lato*/
+    /*border-top: 5px ridge green;   
+    border-right:10px dotted blue;
+    border-bottom: 10px double green;   */
+
+    font-size: 1.5rem;
+    margin: 1.5em 2em 2em 2em;   /* spazio dal bordo a fine pagina. scritto cosi e' come sotto, li applica top>right>bottom>left */
+    /* margin-top: 1.5em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    margin-left: 2em; */
+
+    padding: 1.5em 1.5em 1.5em 1.5em; /*spazio dalla scritta l bordo si puo scrivere anche 1 sol oe lo applia a tutti */
+
+    outline: 5px solid blue;
+    outline-offset: -20px; /*si puo usare un numero negativo, in qst caso si vede dentro l'outline invece che fuori*/
+}
+
+.circle{
+    margin: 3rem auto;  /*con 3rem va al centro pagina */
+    background-color: gold;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000000;
+    border-radius: 50px;        /*quanto i bordi sono curvati (se sono la meta della width/heaght diventa 1 cerchio(?) */
+    outline: 2px solid red;
+    outline-offset: 0.25rem;    /*sposta il cerchio  */
+}
+

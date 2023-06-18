@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  min-height: 400px;
+  margin-inline: auto;
+  border: 1px solid #000;
+  display: flex;                           /*fa apparire le colonne in verticale invece che orizzontale */
+  gap: 1rem;                        /*spazio tra ogni colonna*/
+  justify-content: space-evenly;          /*come spazia ogni riga verticale */
+  align-items: center;
+
+
+  /* flex-direction: row-reverse;
+  flex-wrap: wrap;                    se riduci la pagina la row viene resizata invece di uscire fuori */
+  /*sono i due comandi sopra uniti in 1 solo */
+  flex-flow: row wrap;    /*negli esempi dopo : flex-flow: row-reverse nowrap; oppure row-reverse wrap; */
+  align-content: space-evenly;
+} 
+
+.box {
+  /* min-width: 100px; */
+  height: 100px;
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+
+  display: flex;
+  justify-content: center;        /*muove asse x */
+  align-items: center;            /*aggiusta asse y */
+
+/*se metto: riga 29- flex-flow: row-reverse wrap;  riga46 flex-grow: 1 riga 53:flex-grow: 2; e commento i due flex-shrink scritti sotto ottengo che il secondo child ha le proprieta' scritte a linea56
+se a riga 29- flex-flow: row-reverse wrap; e al posto dei due flex grow metto flex-shrink ottengo l'opposto, cio che se riduco la pagina si riduce il quadrato numero 2 x fare spazio all'1
+*/
+  
+/* 
+flex-grow: 1;           /*        /*fa crescere la box fino a fine pagina */
+/*  flex-shrink: 1;
+   flex-basis: 300px;             quanto e' larga la box di base (?) */
+  
+  /*flex: grow shrink basis */
+  flex: 1 1 300px;
+}
+
+.box:nth-child(2){
+  /*flex-grow: 2;           /*        il child 2 nella sottoclasse box ha nello stesso spazio 1 child con flex growth 1, e entrambe le box sono di 100 px, questo fa si che antrambe si allrghino fino al massimo dello spazio con il flex growth, ma che questo avendo 2 prende il doppio dello spazio rispetto all'altro*/
+  /* flex-shrink: 2; */
+  flex: 1 2 300px;
+  order: 1;                     /*order 1 lo mette alla fine perche tutti gli altri hanno 0 come valore e questo e' il piu alto, quindi l'ultimo */
+}

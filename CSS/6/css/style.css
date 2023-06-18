@@ -1,0 +1,43 @@
+
+/* import del font (si usa al posto dell'import nel file html) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
+
+
+
+
+
+body{
+    padding: 10%;
+    font-size: 2rem;
+  
+}
+
+p{
+    /* text-decoration: underline; */ /*underlina tutto il text*/
+    /* text-transform: capitalize; */ /*mette maiuscola ad ogni parola */
+    /*text-align: center; */          /*mette testo centrato */
+    /* text-indent: 2em; */           /*indenta la prima line (sposta a dx) */
+    line-height: 1.5;                 /*spazio tra 1 linea ed un'altra */
+    /* letter-spacing: 0.25em; */     /*spazio tra 1 lettera ed un'altra */
+    /* word-spacing: 1em; */          /*spazio tra 1 parola ed un'altra */
+    /* font-weight: 900; */           /*quanto e' bold il testo */
+    /* font-style: oblique; */        /*lo stile del font (tipo italic (diagonale)) */
+    /*font-family: Arial, Helvetica, 'Times New Roman', Times, serif;*/     /*tipo di font (se ne scegli uno con 3 font significa che prima prova ad usare il primo, poi il secondo poi il terzo ecc.) */  
+    font-family: 'Roboto', sans-serif;
+
+
+
+
+}
+
+
+
+
+
+
+/* input, button{
+    font: inherit
+} */

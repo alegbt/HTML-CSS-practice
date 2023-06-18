@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  min-height: 200vh;
+  
+}
+
+.outer-container {
+  border: 3px dashed #000;
+  width: 75vw;
+  height: 85vh;
+  margin: 40px auto;
+  position: relative;                 /*se non ci fosse position relative nell'inner container la box di .absolute si sposterebbe qui, ma essendo l'altro a lui piu vicino si sposta li */
+  
+}
+
+.inner-container {
+  border: 2px solid #00f;
+  width: 40vw;
+  height: 50vh;
+  margin: 200px auto;
+   /* position: relative;                 questo sposta il box di.absolute, si sposta qui xke e' il piu vicino a .absolute */ 
+  
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  color: #fff;
+  padding: 1rem;
+}
+
+/*prende 1 posizione assoluta, presa dalla classe + alta (outer container invece che inner container, puo overlappare */
+.absolute{
+  background-color: #00f;
+  position: absolute;                   /*absolute lascia la posizione in modalita di default, quindi modificabile (la modifico sopra) */
+  top: 0px;
+  left: 0px; 
+  z-index: 1;                           /*cosi qst elemento sta sopra altri elementi che hanno 1 valore inferiore ad esso */
+}
+
+/*relative prende la posizione da dove sarebbe piazzato di base, lo si piazza nella div o classe appartenente piu specifica */
+.relative{
+  background-color: red;
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+
+
+
+/*fixed= sta fixato in 1 punto della pagina anche se scrolli, prendre la distanza dai bordi della pagina */
+.fixed{
+  background-color: green;
+  position: fixed;
+  top: 100px;
+}
+
+/*si blocca "sticka" quando raggiunge la posizione 0 a top, si "desticka" quando dovrebbe uscire dalla pagina e scompare */
+.sticky{
+  background-color: orange;
+  position: sticky;
+  top:0;                        
+}

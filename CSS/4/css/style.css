@@ -1,0 +1,43 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* header{
+    width: 100%;
+} */
+
+/* 
+rem= font size of the root element
+em= font size del genitore (della cosa singola "sotto")
+*/
+
+/* Con qst usa tutto lo spazio a disposizione: By setting its min-height property to 100vh, you ensure that the body element always covers at least the full height of the browser viewport.*/
+body{
+    min-height: 100vh;
+}
+
+
+
+/* la % del width e' in percentuale a quanto e' in header, se ho 100% agisce come normale, se ho 50% nell'header h1 usa il 50% del 50% dell'header quindi e' come se stessi prendendo il 25% */
+h1{
+    border: 2px dashed red;
+    width: 50%;
+    font-size: 3rem;
+    padding: 0.5em;  /*questo e' la meta del 3 rem di font size*/
+}
+
+main{
+
+    font-size: 2rem;         /* rem va a modificare il font di base "root" dell'elemento, se poi utilizziamo un em successivamente e.g.( font-size: 2em; ) con lo stesso elemento andremo a moltiplicare il font prima di 2 dal rem e poi di 2 ancora per l'em */
+}
+
+p{  
+    font-size: 2rem;        
+    width: 40ch;            /* quanti caratteri x riga */        
+}

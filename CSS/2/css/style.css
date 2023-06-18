@@ -1,0 +1,29 @@
+
+body {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color:#ffefd5;
+    color: rgb(0,0,0);
+}
+
+/*
+rgba mette la trasparenza, qui metto la trasparenza al 50% 
+ p{
+    color: rgba(0,0,0,0.5); 
+}
+*/
+
+
+/*i 3 numeri in hsl sono:
+Hue: tipo di colore e.g.: 0 o 360=rosso, 120=verde, 240=blu
+Saturation: intensita del colore e.g.: 100% colore saturo, 0% colore ingrigito
+Lightness: luminosita e.g. a 0% e' nero, a 50% e' il colore originale, a 100% e' bianco valori intermedi scuriscono/schiariscono
+ p{
+    color: hsl(0, 100%, 50%)
+} */
+
+
+p{
+    color: #333333;
+}

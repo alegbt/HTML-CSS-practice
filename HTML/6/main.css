@@ -1,0 +1,17 @@
+html {
+    font-size: 22px                                                                    /* metto font size 22 */
+}
+body {
+    background-color: #333;                                                          /* metto colore background nero */
+    color: whitesmoke;                                                               /* metto colore scritte bianco */
+}
+
+a{                                                                                      /* cambio colore dei link, link clickati e link hoverati */
+    color:aliceblue
+}
+a:visited{
+    color: rgb(4, 236, 39)
+}
+a:hover, a:active{
+    color: rgb(255, 2, 57);
+}

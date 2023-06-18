@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/* 
+main{
+  background-color: aqua;
+  width: 50%;
+} */
+
+p{
+  background-color: lightgray;
+  
+}
+
+
+/*
+I block-level element stackano uno sopra l'altro creando nuove line x prendere spazio,
+ gli inline invece non prendono spazio extra.
+ la subclass .opposite e' un inline, quindi se incrementi il padding ( il blocco nero) esso va ad overlappare il resto degl ielementi senza spaziare automaticamente
+ Agiiungendo display: inline-block la facciamo diventare un ibrido di inline e block element, ed inizia a spaziare x non fare overlap
+ Funzione come la height non cambierebbero nulla se fosse un inline, mettendo pero l'inline block il comando inizia a funzionare
+ 
+ Si puo usare x ex se vogliamo rendere 1 link un bottone, cosi che possiamo adattare la pagina come se fosse 1 block-element
+ */
+
+.opposite{
+    /*fa si che il quadrato nero intorno alla subclass non overlappi il resto ma che si adatti la line alla sua altezza */
+  display: inline-block;
+  background-color: black;
+  color: whitesmoke;
+  margin-top: 100px;
+  height: 200px;
+  padding: 2rem;         /*il quadrato nero intorno alla subclass opposite */
+
+
+
+}

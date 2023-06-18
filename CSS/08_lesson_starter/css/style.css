@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  padding: 5% 10%;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+ol{
+  list-style-type: lower-alpha;     /*cosa si vede che ordina la ordered list */
+  padding: 0;                /*cosi si toglie lo spazio a inizio frase */ 
+}
+
+
+ul{
+  list-style-type: square;      /*che simbolo usi x la lista */
+  text-align: center;           /*dove metti il testo */
+  list-style-position: inside;  /*dove metti i punti della lista */
+  color: brown;
+  line-height: 1.6;             /*spazio tra le righe */
+  /*list-style-image: url('../images/checkmark.png'); /*che immagine mettere come simbolo della lista */
+  /*list-style: square url('../images/checkmark.png') inside;  /*stessa cosa sopra, l'img e' la scelta base e gli square (i quadratini come indicatori di lista sono i lfallback) */
+}
+
+ul li:nth-child(2){     /*cambia solo l'elemento numero 2 della ul*/
+  color:blue
+}
+
+ul li:nth-child(odd){   /*cambia solo gli odd */
+  color: aqua;
+}
+
+
+ul ::marker{            /*marker e' il simboletto a sx della list */
+  color: red;
+  font-family: fantasy;
+  font-size: 1em;
+  content: "only 5$ >> ";       /*scritta che metto accanto al marker */
+}

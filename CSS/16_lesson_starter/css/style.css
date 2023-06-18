@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img{
+  display: block;           /*rende le img un block element (quindi occupa tutto lo spazio a sua disposizione nella sua sezione */
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+}
+
+
+.example{
+  margin-top: 1rem;
+  padding-left: 20px;
+  border: 1px solid red;
+}
+
+
+/*le img non sono block-line element ma sono inline */
+
+.example img{
+  width: 25%;         /*qst rende l'img responsive, l'immagine mantiene sempre 1 certa % del size della pagina ( se rimpicciolisci lo spazio l'img si rimpicciolisce anch'essa */
+  height: auto;       /*l'altezza si dimensiona in base alla larghezza ( i nqst caso resta 1 quadrato */
+
+
+}

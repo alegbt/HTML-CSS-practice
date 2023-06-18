@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+}
+
+.columns{
+  /*column-count: 4;            /*crea tot colonne (scrive in verticale uno accanto all'altro) */
+  /*column-width: 250px;       /*allarga le colonne fino a 250px (potrebbe metterne un numero diverso di colonne se la larghezza nn permette di crearne tante quante indicate nel count */
+  
+  columns: 4 250px;             /*4 e' il count e 250 la width */
+  column-rule: 3px solid #333;  /*righe tra 1 colonna ed 1 altra */
+  column-gap: 3rem;               /*spazio tra le scritte e la colonna */
+
+}
+
+
+.columns p{         /*prendo solo i p della sottoclasse columns */
+  margin-top: 0;
+}
+
+/*va riabilitato l'h2 in index x vedere qst */
+.columns h2{
+  margin-top: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;            /*quanto alto il background */
+  break-inside: avoid;      /*evita che faccia cose strane in momento di resize (tipo apparire 1 pezzo alla riga dopo, ecc.) */
+  /*break-before: column;     /*fa si che stia sempre ad inizio column, ma se resizato ad 1 colonna sola si bugga */
+}
+
+/* 
+il margin top qua sotto NON FUNZIONA, perche .quote ha 1 specificita' inferiore (10) a .columns p (11), che ha margin-top 0,
+e quindi l'opzione dell'altro prevale su qst, x far prevalere questo usiamo sotto  .columns .quote che ha specificita 20 e prevale
+.quote{
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  color: #333;
+  column-span: all;
+} */
+
+.columns .quote{
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  color: #333;
+  column-span: all;
+} 
+
+.nowrap{
+  white-space: nowrap;          /*fa si che non possa essere "spezzato" in 2 linee */
+}

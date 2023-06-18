@@ -1,0 +1,72 @@
+
+
+html{
+    font-size: 22px;
+}
+
+
+body {
+    
+}
+
+main{
+    font-family: monospace;
+}
+
+button, input, textarea, select{
+    font: inherit;
+}
+
+
+h1, h2{
+    color: red;
+}
+
+
+.gray{                   /*questo va a modificare chi ha class gray nel <p> ( <p class="gray"> )*/
+    color: gray        /*anche qst va a modificare 1 elemento <p> ma e' + specifico, quindi sovrasta quelli sotto nonostante sia scritto prima*/
+}
+
+
+p{                         /*questo va a modificare tutti quelli nel <p></p> )*/
+     color: blueviolet;  /*legge a cascata, qst viene sovrascrittto da quello sotto */
+}
+
+p{
+    color: rgb(0, 255, 106);              
+}
+
+
+
+.highlight{
+    text-transform: uppercase;
+    background-color: gold;
+}
+
+
+
+#second{                        /* questo va a modificare chi ha l'id second ( <p id="second" ) */
+    font-style: italic;
+}
+
+
+/*
+Ordine di specificita' nei selector:
+
+ELEMENT SELECTOR = 
+
+body {
+}
+
+CLASS SELECTOR= 
+
+.gray{                          
+}
+
+ID SELECTOR= 
+
+#second{                        
+   
+}
+
+*/

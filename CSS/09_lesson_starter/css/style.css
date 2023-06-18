@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0.5rem;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+nav{
+    border: 2px solid #333;
+    border-radius: 2rem;
+    margin: 0 auto 1rem;
+    max-width: 600px;
+    font-size: 3rem;
+    line-height: 7rem;
+}
+
+h2{
+    padding: 1rem;
+    background: gold;
+    border-radius: 2rem 2rem 0 0;   /*qui setto l'angolazione dei bordi (alto sx, alto dx, basso dx, basso sx */
+}
+
+ul{
+    list-style-type: none;          /*fa scomparire i ppuntini nella lista */
+}
+
+
+li{
+    border-top: 1px solid #333;     /*metto dei bordini sopra, le linee nere tra 1 elemento della lista ed 1 altro */
+}
+
+
+
+/*qui seleziono tutti gli a (i link) nella lista,
+  poi faccio multiselezione e prendo anche tutti i li a:visited (tutti i link visitati
+  e gli attribuisco valori
+*/
+
+
+li a{                   
+    display: block;         /*cosi quando faccio mouseover l'intera sezione si highlighta e posso cliccare ovunque */
+}
+
+li a,                                 
+li a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover,
+li a:focus {
+    background: #333;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+li:last-child a{                    /*sceglie l'ultimo elemento e basta */
+    border-radius: 0 0 2rem 2rem;
+}

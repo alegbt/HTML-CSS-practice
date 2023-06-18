@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/*Floats servono x mettere i testi a sx o destra */
+
+.block{
+  width: 30vw;
+  height: 30vw;
+  background-color: black;
+  color: aliceblue;
+  padding: 1rem;
+}
+
+.left{
+  float: left;              /*mette l'elemento a sinistra e gli attacca le scritte*/
+  margin-right: 1rem;       /*spazio a dx tra l'elemento ed i lresto delle cose */
+}
+
+.right{
+  float: right;
+  margin-left: 1rem;
+}
+
+
+.clear{
+  clear: both;
+}
+
+
+section{
+  background-color: bisque;
+  border: 1px solid black;
+  padding: 1rem;
+  /* overflow: auto; */           /*codice legacy, estende il container element(la section colorata) fino alla fine dell'elemento (la section colorata che contiene Float) */
+  display: flow-root;             /*stessa cosa ma soluzione + moderna */
+}
